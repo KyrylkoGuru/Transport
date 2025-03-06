@@ -1,0 +1,10 @@
+D:\VisualStudio\Codes\CSharp\Transport\bin\Debug\Transport.exe.config
+D:\VisualStudio\Codes\CSharp\Transport\bin\Debug\Transport.exe
+D:\VisualStudio\Codes\CSharp\Transport\bin\Debug\Transport.pdb
+D:\VisualStudio\Codes\CSharp\Transport\obj\Debug\Transport.csproj.AssemblyReference.cache
+D:\VisualStudio\Codes\CSharp\Transport\obj\Debug\Transport.Form1.resources
+D:\VisualStudio\Codes\CSharp\Transport\obj\Debug\Transport.Properties.Resources.resources
+D:\VisualStudio\Codes\CSharp\Transport\obj\Debug\Transport.csproj.GenerateResource.cache
+D:\VisualStudio\Codes\CSharp\Transport\obj\Debug\Transport.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Codes\CSharp\Transport\obj\Debug\Transport.exe
+D:\VisualStudio\Codes\CSharp\Transport\obj\Debug\Transport.pdb
