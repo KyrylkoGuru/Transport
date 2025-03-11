@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labelBrand = new System.Windows.Forms.Label();
             this.labelSpeed = new System.Windows.Forms.Label();
@@ -46,29 +45,22 @@
             this.labelGears = new System.Windows.Forms.Label();
             this.checkBoxGears = new System.Windows.Forms.CheckBox();
             this.listBoxTransport = new System.Windows.Forms.ListBox();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonAdd.Location = new System.Drawing.Point(653, 35);
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonAdd.Location = new System.Drawing.Point(653, 2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(137, 39);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Додати транспорт";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // buttonClear
-            // 
-            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonClear.Location = new System.Drawing.Point(653, 96);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(137, 39);
-            this.buttonClear.TabIndex = 1;
-            this.buttonClear.Text = "Очистити список";
-            this.buttonClear.UseVisualStyleBackColor = false;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // label1
             // 
@@ -213,10 +205,56 @@
             this.listBoxTransport.ForeColor = System.Drawing.Color.White;
             this.listBoxTransport.FormattingEnabled = true;
             this.listBoxTransport.ItemHeight = 16;
-            this.listBoxTransport.Location = new System.Drawing.Point(12, 150);
+            this.listBoxTransport.Location = new System.Drawing.Point(14, 178);
             this.listBoxTransport.Name = "listBoxTransport";
             this.listBoxTransport.Size = new System.Drawing.Size(776, 260);
             this.listBoxTransport.TabIndex = 18;
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonClear.Location = new System.Drawing.Point(653, 133);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(137, 39);
+            this.buttonClear.TabIndex = 1;
+            this.buttonClear.Text = "Видалити дані";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonSave.Location = new System.Drawing.Point(653, 47);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(135, 39);
+            this.buttonSave.TabIndex = 19;
+            this.buttonSave.Text = "Завантажити дані";
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonLoad.Location = new System.Drawing.Point(653, 88);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(135, 39);
+            this.buttonLoad.TabIndex = 20;
+            this.buttonLoad.Text = "Обрати з файлу";
+            this.buttonLoad.UseVisualStyleBackColor = false;
+            this.buttonLoad.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboBoxFilter
+            // 
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.Items.AddRange(new object[] {
+            "Всі",
+            "Car",
+            "Bus",
+            "Bicycle"});
+            this.comboBoxFilter.Location = new System.Drawing.Point(669, 178);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxFilter.TabIndex = 21;
             // 
             // Form1
             // 
@@ -224,6 +262,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxFilter);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.listBoxTransport);
             this.Controls.Add(this.checkBoxGears);
             this.Controls.Add(this.labelGears);
@@ -242,7 +283,7 @@
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonAdd);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Транспорт";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,7 +292,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelBrand;
         private System.Windows.Forms.Label labelSpeed;
@@ -267,6 +307,10 @@
         private System.Windows.Forms.Label labelGears;
         private System.Windows.Forms.CheckBox checkBoxGears;
         private System.Windows.Forms.ListBox listBoxTransport;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.ComboBox comboBoxFilter;
     }
 }
 
